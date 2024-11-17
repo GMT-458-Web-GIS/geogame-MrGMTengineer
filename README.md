@@ -1,5 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ATV5e7Id)
-*Click and start the game on the website** : https://gmt-458-web-gis.github.io/geogame-MrGMTengineer/
+
+**Click and start the game on the website** : https://gmt-458-web-gis.github.io/geogame-MrGMTengineer/
 # Two Take Give Game
 
 **Two Take Give Game** is an interactive geography game where players attempt to guess a randomly selected city on the map. The game features an animated start screen and provides hints to enhance the experience.
