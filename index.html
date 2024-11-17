@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Al Ver Oyunu</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Genel Sayfa Stili */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3); /* Arka plan geçiş rengi */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Başlık Stili */
+        h1 {
+            font-size: 2.5em;
+            color: #2a2a72;
+            margin-top: 30px;
+            text-shadow: 1px 1px 2px #333;
+            text-align: center;
+        }
+
+        /* Harita Çerçevesi */
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 20px auto;
+            border: 3px solid #2a2a72;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Buton Stili */
+        #startGame {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #ffffff;
+            background-color: #2a2a72;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        #startGame:hover {
+            background-color: #1d1d63;
+            transform: scale(1.05);
+        }
+
+        /* Görsel İpucu Stil */
+        img[alt^='İpucu'] {
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* El Animasyonları */
+        #leftHand, #rightHand {
+            width: 80px;
+            height: 80px;
+            font-size: 50px;
+            position: absolute;
+            top: 40%;
+            transition: transform 0.5s ease;
+            color: #2a2a72;
+        }
+
+        #leftHand {
+            left: -100px; /* Başlangıçta ekranın solunda */
+            transform: rotate(30deg);
+        }
+
+        #rightHand {
+            right: -100px; /* Başlangıçta ekranın sağında */
+            transform: rotate(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- El Animasyonları için HTML -->
+    <div id="leftHand">✋</div>
+    <div id="rightHand">🤚</div>
+
+    <h1>İki Al Ver Oyunu</h1>
+    <div id="map"></div>
+    <button id="startGame">Oyunu Başlat</button>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
